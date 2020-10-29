@@ -11,4 +11,5 @@ SketchUp was used for the model with free LOD1 from federale state Brandenburg/G
 The challenge for the next upgrade is to bring the buildings from the LOD1-dataset to one planar level.**     
 
 * https://geobroker.geobasis-bb.de/gbss.php?MODE=GetProductInformation&PRODUCTID=0414a37a-a749-4ee6-9f59-a41226919c58
+
 ** https://gis.stackexchange.com/questions/377671/bring-buildings-from-one-citygml-dataset-to-same-planar-level
