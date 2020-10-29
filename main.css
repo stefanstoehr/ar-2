@@ -1,0 +1,189 @@
+body {
+	margin: 				0;
+	border: 				0;
+	background-color: 		rgb(0,63,87);
+	font-family: 			Arial;
+	overflow: 				hidden;
+}
+
+#titel {
+	position: 				absolute;
+	margin: 				0;
+	border: 				0;
+	padding:				0;
+	top: 					23px;
+	left: 					23px;
+	width:					50%;					
+	box-sizing: 			border-box;
+	text-align: 			left;
+	-moz-user-select: 		none;
+	-webkit-user-select: 	none;
+	-ms-user-select: 		none;
+	user-select: 			none;
+	pointer-events: 		none;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+h2 {
+	margin-top:				0;
+	margin-bottom:			0;
+	color: 					#FFFFFF;
+}
+
+h6 {
+	color: 					#FFFFFF;
+}
+
+p {
+	color: 					#000000;
+	font-size: 				auto;
+}
+
+#logo {
+	position: 				absolute;
+	top: 					23px;
+	right: 					23px;
+	width:					auto;
+	box-sizing: 			border-box;
+	text-align: 			right;
+	-moz-user-select: 		none;
+	-webkit-user-select: 	none;
+	-ms-user-select: 		none;
+	user-select: 			none;
+	pointer-events: 		none;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+.circleLeft {
+	position: 				absolute;
+	width: 					3em;
+	height: 				3em;
+	bottom: 				23px;
+	left: 					23px;
+	background: 			none;
+	border-radius: 			50%;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+.circleLeft:hover {
+	background-color: 		#E40033;
+	cursor: 				pointer;
+}
+
+#info {
+	position: 				absolute;
+	width: 					3em;
+	height: 				3em;
+	bottom: 				23px;
+	left: 					23px;
+	box-sizing: 			border-box;
+	text-align: 			right;
+	-moz-user-select: 		none;
+	-webkit-user-select: 	none;
+	-ms-user-select: 		none;
+	user-select: 			none;
+	pointer-events: 		none;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+.circleRight {
+	position: 				absolute;
+	width: 					3em;
+	height: 				3em;
+	bottom: 				23px;
+	right: 					23px;
+	background: 			none;
+	border-radius: 			50%;
+	border:					3px solid white;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+.circleRight:hover {
+	background-color: 		#E40033;
+	cursor: 				pointer;
+}
+
+#mail {
+	position:				absolute;
+	width: 					2em;
+	height: 				2em;
+	top:					0.5em;
+	left:					0.5em;
+	z-index: 				1; /* TODO Solve this in HTML */
+}
+
+/* The Modal (background) */
+.infomodal {
+  display: 					none; /* Hidden by default */
+  position: 				fixed; /* Stay in place */
+  z-index: 					1; /* Sit on top */
+  left: 					0;
+  top: 						0;
+  width: 					100%; /* Full width */
+  height: 					100%; /* Full height */
+  overflow: 				auto; /* Enable scroll if needed */
+  background-color: 		rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.mailmodal {
+  display: 					none; /* Hidden by default */
+  position: 				fixed; /* Stay in place */
+  z-index: 					1; /* Sit on top */
+  left: 					0;
+  top: 						0;
+  width: 					100%; /* Full width */
+  height: 					100%; /* Full height */
+  overflow: 				auto; /* Enable scroll if needed */
+  background-color: 		rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: 		#fefefe;
+  color:					#FFFFFF;
+  margin: 					15% auto; /* 15% from the top and centered */
+  padding: 					20px;
+  border: 					1px solid #888;
+  width: 					80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.infoclose {
+  color: 					#aaa;
+  float: 					right;
+  font-size: 				28px;
+  font-weight: 				bold;
+}
+
+.infoclose:hover,
+.infoclose:focus {
+  color: 					black;
+  text-decoration: 			none;
+  cursor: 					pointer;
+}
+
+.mailclose {
+  color: 					#aaa;
+  float: 					right;
+  font-size: 				28px;
+  font-weight: 				bold;
+}
+
+.mailclose:hover,
+.mailclose:focus {
+  color: 					black;
+  text-decoration: 			none;
+  cursor: 					pointer;
+}
+
+textarea {
+	caret-color: 			red;  
+	width: 					95%;
+	height: 				15em;
+	border: 				1px solid #cccccc;
+	padding: 				0.5em;
+	font-family: 			ArialS, sans-serif;
+}
+textarea:focus {
+      background: 			#FFC;
+}

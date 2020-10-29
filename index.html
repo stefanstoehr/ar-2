@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title>DEMO</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+	
+	<body>
+	
+		<div id="container"></div>
+		
+		<div id="titel">
+			<h2>Vom Wassergraben zum Radtunnel</h2>
+			<h6>D E M O P R O J E K T</h6>
+			<h6>Pr&aumlsentation und Beteiligung vom 29. Mai bis 29. Juli 2020</h6>
+		</div>
+		
+		<div id="logo">
+			<img src="https://raw.githubusercontent.com/stewahn/Radtunnel/master/logo.svg">
+		</div>
+		
+		<div class="circleLeft" id="infoBtn"></div>
+	
+		<svg id="info" width="3em" height="3em" viewBox="0 0 16 16" fill="#FFFFFF">
+			<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+			<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+			<circle cx="8" cy="4.5" r="1"/>
+		</svg>
+		
+		<div class="circleRight" id="mailBtn">
+			<svg id="mail" viewBox="0 0 16 16" fill="#FFFFFF">
+				<path fill-rule="evenodd" d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+				<path d="M.05 3.555C.017 3.698 0 3.847 0 4v.697l5.803 3.546L0 11.801V12c0 .306.069.596.192.856l6.57-4.027L8 9.586l1.239-.757 6.57 4.027c.122-.26.191-.55.191-.856v-.2l-5.803-3.557L16 4.697V4c0-.153-.017-.302-.05-.445L8 8.414.05 3.555z"/>
+			</svg>
+		</div>
+		
+		<div class="infomodal" id="infomodal">
+			<div class="modal-content">
+				<span class="infoclose">&times;</span>
+				<p><b>Wassergraben zum Radtunnel</b></p><br>
+				<p>Ideenvisualisierung: F&uumlr eine sichere Radwegeverbindung l&aumlsst sich der Tranitzgraben &oumlstlich von Cottbus als Radwegetunnel erweitern. Die Dimension der Unterf&uumlhrung (Breite = 3 m, H&oumlhe = 3 m) eigent sich grunds&aumltzlich f&uumlr das Vorhaben. Im Falle eines Ausbaus der B97 (gelb) garantiert die Unterf&uumlhrung einen sicheren Radweg. Um das Modell genauer zu betrachten bewegen und zoomen Sie.</p></br>
+				<p><img src="https://raw.githubusercontent.com/stewahn/Radtunnel/master/Legende.png"></p>
+			</div>
+		</div>
+		
+		<div class="mailmodal" id="mailmodal">
+			<div class="modal-content">
+				<span class="mailclose">&times;</span>
+				<p><b>Ihr Feedback an FB61</b></p><br>
+				<form action="mailto:stefan.stoehr@cottbus.de" method="post" target="_top">
+				<textarea></textarea><br><br>
+				<input type="Submit" name="absenden" value="absenden">
+				</form>
+			</div>
+		</div>
+		
+		<script>
+		
+		//INFOMODAL
+		
+		// Get the modal
+		var infomodal = document.getElementById("infomodal");
+
+		// Get the button that opens the modal
+		var infobtn = document.getElementById("infoBtn");
+
+		// Get the <span> element that closes the modal
+		var infospan = document.getElementsByClassName("infoclose")[0];
+
+		// When the user clicks on the button, open the modal
+		infobtn.onclick = function() {
+		infomodal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		infospan.onclick = function() {
+		infomodal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		if (event.target == infomodal) {
+		infomodal.style.display = "none";
+		}}
+		
+		//MAILMODAL
+		
+		// Get the modal
+		var mailmodal = document.getElementById("mailmodal");
+
+		// Get the button that opens the modal
+		var mailbtn = document.getElementById("mailBtn");
+
+		// Get the <span> element that closes the modal
+		var mailspan = document.getElementsByClassName("mailclose")[0];
+
+		// When the user clicks on the button, open the modal
+		mailbtn.onclick = function() {
+		mailmodal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		mailspan.onclick = function() {
+		mailmodal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		if (event.target == mailmodal) {
+		mailmodal.style.display = "none";
+		}}
+		
+		</script>
+		
+		<script type="module">
+
+			import * as THREE from 'https://threejs.org/build/three.module.js';
+
+			import { ColladaLoader } from 'https://threejs.org/examples/jsm/loaders/ColladaLoader.js';
+			
+			import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+			
+			var container, clock;
+			var camera, controls, scene, renderer, collada, simplegeometry;
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 2000 );
+				camera.position.set( 66, 66, 150 );
+				//camera.lookAt( 0, 0, 0 );
+
+				scene = new THREE.Scene();
+
+				scene.background = new THREE.Color( 0x003F57 );
+					
+				clock = new THREE.Clock();
+
+				// loading manager
+
+				var loadingManager = new THREE.LoadingManager( function () {
+
+					scene.add( simplegeometry );
+
+				} );
+
+				// collada
+
+				var loader = new ColladaLoader( loadingManager );
+				loader.load( 'https://raw.githubusercontent.com/stewahn/Radtunnel/master/Radtunnel.dae', function ( collada ) {
+
+					simplegeometry = collada.scene;
+					
+				} );
+	
+				//
+
+				
+				var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.7 );
+				directionalLight.position.set( 55, 55, 55 ).normalize();
+				scene.add( directionalLight );
+
+				var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.7 );
+				directionalLight.position.set( -55, 55, 55 ).normalize();
+				scene.add( directionalLight );
+				
+				//
+
+				renderer = new THREE.WebGLRenderer({ antialias: true });
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				// controls
+
+				controls = new OrbitControls( camera, renderer.domElement );
+
+				//controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)
+				controls.autoRotate = true;
+				controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+				controls.dampingFactor = 0.05;
+
+				controls.screenSpacePanning = false;
+
+				controls.minDistance = 10;
+				controls.maxDistance = 500;
+
+				controls.maxPolarAngle = Math.PI / 2;
+				
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				controls.update();
+				
+				render();
+
+			}
+
+			function render() {
+			
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>
