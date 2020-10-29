@@ -5,7 +5,7 @@
 		<title>DEMO</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="main.css">
+		<link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/stewahn/ndkk2020web/master/main.css">
 	</head>
 	
 	<body>
@@ -14,8 +14,8 @@
 		
 		<div id="titel">
 			<h2>Vom Wassergraben zum Radtunnel</h2>
-			<h6>D E M O P R O J E K T</h6>
-			<h6>Pr&aumlsentation und Beteiligung vom 29. Mai bis 29. Juli 2020</h6>
+			<h6>Demo</h6>
+			<h6>29. Oktober 2020</h6>
 		</div>
 		
 		<div id="logo">
@@ -40,16 +40,15 @@
 		<div class="infomodal" id="infomodal">
 			<div class="modal-content">
 				<span class="infoclose">&times;</span>
-				<p><b>Wassergraben zum Radtunnel</b></p><br>
-				<p>Ideenvisualisierung: F&uumlr eine sichere Radwegeverbindung l&aumlsst sich der Tranitzgraben &oumlstlich von Cottbus als Radwegetunnel erweitern. Die Dimension der Unterf&uumlhrung (Breite = 3 m, H&oumlhe = 3 m) eigent sich grunds&aumltzlich f&uumlr das Vorhaben. Im Falle eines Ausbaus der B97 (gelb) garantiert die Unterf&uumlhrung einen sicheren Radweg. Um das Modell genauer zu betrachten bewegen und zoomen Sie.</p></br>
-				<p><img src="https://raw.githubusercontent.com/stewahn/Radtunnel/master/Legende.png"></p>
+				<p><b>B-Plan-Illustration</b></p><br>
+				<p>Den rechtsgueltigen Bebauungsplan fuer die Lausitzer und Schweriner Strasse kannst du <a href="https://raw.githubusercontent.com/stewahn/ndkk2020web/master/Plandokument.pdf" target="_blank">hier als PDF</a> abrufen.</p></br>
 			</div>
 		</div>
 		
 		<div class="mailmodal" id="mailmodal">
 			<div class="modal-content">
 				<span class="mailclose">&times;</span>
-				<p><b>Ihr Feedback an FB61</b></p><br>
+				<p><b>Dein Feedback an den Fachbereich Stadtentwicklung</b></p><br>
 				<form action="mailto:stefan.stoehr@cottbus.de" method="post" target="_top">
 				<textarea></textarea><br><br>
 				<input type="Submit" name="absenden" value="absenden">
@@ -154,7 +153,7 @@
 				// collada
 
 				var loader = new ColladaLoader( loadingManager );
-				loader.load( 'https://raw.githubusercontent.com/stewahn/Radtunnel/master/Radtunnel.dae', function ( collada ) {
+				loader.load( 'https://raw.githubusercontent.com/stewahn/ndkk2020web/master/LausitzerStr.dae', function ( collada ) {
 
 					simplegeometry = collada.scene;
 					
