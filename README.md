@@ -1,8 +1,6 @@
-# THE PLAN 2
-
 # Part II of Event-Project: "Night of the creative minds 2020 in Cottbus/Germany" (Live Demo 24.10.2020 Stadthalle Cottbus 6:00 - 12:00 pm) -- CANCELD (CORONA)
 
-Part II presents Part I as a standalone web-app: https://stewahn.github.io/ndkk2020web/
+Part II presents Part I as a standalone web-app: https://stefanstoehr.github.io/ndkk2020web/
 
 You can see a 3D-model of a part of the city district Ströbitz in Cottbus with two marked construction areas. It is an easy to understand plan in addition to the official construction plan from administration.
 
